@@ -34,13 +34,16 @@ Partial Class Form1
         Me.txtRaiz1 = New System.Windows.Forms.TextBox()
         Me.txtRaiz2 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.LblTipoRaiz = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Calcular
         '
-        Me.Calcular.Location = New System.Drawing.Point(155, 104)
+        Me.Calcular.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Calcular.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Calcular.Location = New System.Drawing.Point(147, 76)
         Me.Calcular.Name = "Calcular"
-        Me.Calcular.Size = New System.Drawing.Size(96, 52)
+        Me.Calcular.Size = New System.Drawing.Size(115, 52)
         Me.Calcular.TabIndex = 0
         Me.Calcular.Text = "Calcular"
         Me.Calcular.UseVisualStyleBackColor = True
@@ -48,7 +51,8 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(31, 82)
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label1.Location = New System.Drawing.Point(23, 66)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(14, 13)
         Me.Label1.TabIndex = 1
@@ -57,7 +61,8 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(31, 124)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label2.Location = New System.Drawing.Point(23, 92)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(14, 13)
         Me.Label2.TabIndex = 2
@@ -66,7 +71,8 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(31, 169)
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label3.Location = New System.Drawing.Point(23, 118)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(14, 13)
         Me.Label3.TabIndex = 3
@@ -75,7 +81,8 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(274, 98)
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label4.Location = New System.Drawing.Point(292, 81)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(37, 13)
         Me.Label4.TabIndex = 4
@@ -84,7 +91,8 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(274, 139)
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label5.Location = New System.Drawing.Point(292, 107)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(37, 13)
         Me.Label5.TabIndex = 5
@@ -92,35 +100,35 @@ Partial Class Form1
         '
         'aux1
         '
-        Me.aux1.Location = New System.Drawing.Point(51, 79)
+        Me.aux1.Location = New System.Drawing.Point(43, 63)
         Me.aux1.Name = "aux1"
         Me.aux1.Size = New System.Drawing.Size(56, 20)
         Me.aux1.TabIndex = 6
         '
         'aux2
         '
-        Me.aux2.Location = New System.Drawing.Point(51, 117)
+        Me.aux2.Location = New System.Drawing.Point(43, 89)
         Me.aux2.Name = "aux2"
         Me.aux2.Size = New System.Drawing.Size(56, 20)
         Me.aux2.TabIndex = 7
         '
         'aux3
         '
-        Me.aux3.Location = New System.Drawing.Point(51, 162)
+        Me.aux3.Location = New System.Drawing.Point(43, 115)
         Me.aux3.Name = "aux3"
         Me.aux3.Size = New System.Drawing.Size(56, 20)
         Me.aux3.TabIndex = 8
         '
         'txtRaiz1
         '
-        Me.txtRaiz1.Location = New System.Drawing.Point(317, 94)
+        Me.txtRaiz1.Location = New System.Drawing.Point(335, 78)
         Me.txtRaiz1.Name = "txtRaiz1"
         Me.txtRaiz1.Size = New System.Drawing.Size(56, 20)
         Me.txtRaiz1.TabIndex = 9
         '
         'txtRaiz2
         '
-        Me.txtRaiz2.Location = New System.Drawing.Point(317, 136)
+        Me.txtRaiz2.Location = New System.Drawing.Point(335, 104)
         Me.txtRaiz2.Name = "txtRaiz2"
         Me.txtRaiz2.Size = New System.Drawing.Size(56, 20)
         Me.txtRaiz2.TabIndex = 10
@@ -128,11 +136,23 @@ Partial Class Form1
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(31, 31)
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label6.Location = New System.Drawing.Point(59, 29)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(318, 13)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Dada la formula general de las ecuc de seg grado : Ax^2+Bx+C=0"
+        '
+        'LblTipoRaiz
+        '
+        Me.LblTipoRaiz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LblTipoRaiz.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.LblTipoRaiz.Location = New System.Drawing.Point(26, 161)
+        Me.LblTipoRaiz.Name = "LblTipoRaiz"
+        Me.LblTipoRaiz.Size = New System.Drawing.Size(365, 25)
+        Me.LblTipoRaiz.TabIndex = 12
+        Me.LblTipoRaiz.Text = "Input A, B, and C values"
+        Me.LblTipoRaiz.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Form1
         '
@@ -142,7 +162,8 @@ Partial Class Form1
         Me.AutoScrollMargin = New System.Drawing.Size(2, 4)
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(384, 262)
+        Me.ClientSize = New System.Drawing.Size(419, 211)
+        Me.Controls.Add(Me.LblTipoRaiz)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtRaiz2)
         Me.Controls.Add(Me.txtRaiz1)
@@ -177,4 +198,5 @@ Partial Class Form1
     Friend WithEvents txtRaiz1 As TextBox
     Friend WithEvents txtRaiz2 As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents LblTipoRaiz As Label
 End Class

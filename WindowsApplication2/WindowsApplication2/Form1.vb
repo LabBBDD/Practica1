@@ -3,25 +3,12 @@
 
     End Sub
 
-    Private Sub A_TextChanged(sender As Object, e As EventArgs) Handles aux1.TextChanged
-
-    End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Calcular.Click
         Dim ec As Ecuacion
         Dim A, B, C As Double
         If Not Double.TryParse(aux1.Text, A) Or Not Double.TryParse(aux1.Text, B) Or Not Double.TryParse(aux3.Text, C) Then
             MsgBox("Formato de datos incorrecto, por favor vuelva a introducir los datos")
             Exit Sub
-
-            A = aux1.Text
-            B = aux2.Text
-            C = aux3.Text
-            txtRaiz1.Clear()
-            txtRaiz2.Clear()
-
-        Else
-            MsgBox("Error")
         End If
 
 
@@ -33,25 +20,25 @@
             txtRaiz1.ForeColor = Color.Blue
             txtRaiz2.ForeColor = Color.Blue
             If ec.pflag() = 0 Then
+                LblTipoRaiz.Text = "La ecuación introducida tiene dos raices reales"
                 txtRaiz1.Text = Math.Round(ec.px1, 2).ToString
                 txtRaiz2.Text = Math.Round(ec.px2, 2).ToString
             ElseIf ec.pflag() = 1 Then
+                LblTipoRaiz.Text = "La ecuación introducida tiene una raiz real doble"
                 txtRaiz1.Text = Math.Round(ec.px1, 2).ToString
                 txtRaiz2.Clear()
+                txtRaiz2.Enabled = False
             ElseIf ec.pflag() = 2 Then
+                LblTipoRaiz.Text = "La ecuación introducida tiene dos raices imaginarias"
                 txtRaiz1.ForeColor = Color.Red
                 txtRaiz2.ForeColor = Color.Red
                 txtRaiz1.Text = Math.Round(ec.px1, 2).ToString + " + " + Math.Round(ec.px2, 2).ToString + "i"
                 txtRaiz2.Text = Math.Round(ec.px1, 2).ToString + " - " + Math.Round(ec.px2, 2).ToString + "i"
-            Else
-                MsgBox("SE HA PRODUCIDO UN ERROR")
             End If
         End If
-        Select Case MsgBox("QUIERES REALIZAR OTRA ECUACION", MsgBoxStyle.YesNo)
+        Select Case MsgBox("¿QUIERES RESOLVER OTRA ECUACION?", MsgBoxStyle.YesNo)
             Case MsgBoxResult.Yes
-                aux1.Text = 0
-                aux2.Text = 0
-                aux3.Text = 0
+                limpiar()
             Case MsgBoxResult.No
                 Me.Close()
 
@@ -59,10 +46,18 @@
 
     End Sub
 
-    Private Sub C_TextChanged(sender As Object, e As EventArgs) Handles aux3.TextChanged
-
+    Private Sub limpiar()
+        aux1.Text = ""
+        aux2.Text = ""
+        aux3.Text = ""
+        LblTipoRaiz.Text = "Input A, B, and C values"
+        txtRaiz1.Text = ""
+        txtRaiz2.Text = ""
+        txtRaiz2.Enabled = True
     End Sub
+
 End Class
+
 Public Class Ecuacion
     Private ma As Double
     Private mb As Double
